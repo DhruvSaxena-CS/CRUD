@@ -1,12 +1,10 @@
 const mysql = require('mysql2/promise');
 require('dotenv').config();
 
-// Create a connection pool WITHOUT specifying the database initially
 const pool = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
-  // Don't specify database here initially
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
@@ -67,7 +65,7 @@ async function createDatabasePool() {
       host: process.env.DB_HOST,
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
-      database: process.env.DB_NAME, // Now we can specify the database
+      database: process.env.DB_NAME, 
       waitForConnections: true,
       connectionLimit: 10,
       queueLimit: 0
