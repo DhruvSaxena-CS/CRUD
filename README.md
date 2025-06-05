@@ -1,4 +1,4 @@
-# Node.js SQL CRUD Application
+# CRUD Application
 
 A full-stack web application demonstrating CRUD (Create, Read, Update, Delete) operations using Node.js, Express.js, and MySQL.
 
